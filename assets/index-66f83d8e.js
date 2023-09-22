@@ -5259,7 +5259,7 @@ function request(method) {
 function authHeader(url) {
   const { accessToken } = authStore();
   const isLoggedIn = !!accessToken;
-  const isApiUrl = url.startsWith("https://gway.mindwars.co.in");
+  const isApiUrl = url.startsWith("https://stage.mindwars.co.in");
   if (isLoggedIn && isApiUrl) {
     return { Authorization: `Bearer ${accessToken}` };
   } else {
@@ -5310,7 +5310,7 @@ const authStore = defineStore("auth", {
     }
   }
 });
-const baseUrl$1 = `${"https://gway.mindwars.co.in"}`;
+const baseUrl$1 = `${"https://stage.mindwars.co.in"}`;
 const userStore = defineStore("user", {
   state: () => ({
     // initialize state from local storage to enable user to stay logged in
@@ -5517,7 +5517,7 @@ const userStore = defineStore("user", {
     }
   }
 });
-const baseUrl = `${"https://gway.mindwars.co.in"}`;
+const baseUrl = `${"https://stage.mindwars.co.in"}`;
 const leaderBoardStore = defineStore("leaderBoard", {
   state: () => ({
     // initialize state from local storage to enable user to stay logged in
